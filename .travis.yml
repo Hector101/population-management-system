@@ -6,7 +6,6 @@ cache:
   directories:
     - node_modules
 script:
-  - npm run build
   - npm run coverage
 after_script:
   - cat ./coverage/lcov.info | coveralls
