@@ -1,0 +1,49 @@
+schema {
+  query: RootQuery
+  mutation: RootMutation
+}
+
+"""Location population details"""
+type location {
+  """Location ID"""
+  id: ID!
+
+  """Location name"""
+  name: String!
+
+  """Male population in a location"""
+  malePopulation: Int!
+
+  """Female population in a location"""
+  femalePopulation: Int!
+
+  """Total population of both genders in this location"""
+  totalPopulation: Int!
+
+  """primary key of location's parent location"""
+  parentId: String
+}
+
+"""Response message"""
+type message {
+  """message after successful location population modification"""
+  message: String!
+}
+
+"""Root Mutation for Population Management System"""
+type RootMutation {
+  """Create new location with the population details of location"""
+  createLocation(name: String!, malePopulation: Int!, femalePopulation: Int!, parentId: String): location
+
+  """Update existing population details of a location"""
+  updateLocation(id: ID!, name: String, malePopulation: Int, femalePopulation: Int, totalPopulation: Int, parentId: String): message
+
+  """Delete existing population details of a location"""
+  deleteLocation(id: ID!): message
+}
+
+"""Root Query for Population Management System"""
+type RootQuery {
+  """List of all locations and their population details"""
+  locationsPopulation: [location]
+}
