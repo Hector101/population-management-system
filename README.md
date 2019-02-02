@@ -39,6 +39,9 @@ mutation {
   createLocation(name: "Anthony", malePopulation: 10, femalePopulation: 15, parentId: "Optional ID") {
     id
     malePopulation
+    femalePopulation
+    totalPopulation
+    parentId
   }
   updateLocation(id: "Existing location population ID Eg: e9067445-7c1c-4ccd-b36f-2ccd556ac163", name: "Ilupeju", malePopulation: 10) {
     message
