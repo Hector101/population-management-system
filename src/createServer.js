@@ -17,7 +17,7 @@ dotenv.config();
 const graphqlRequest = (req) => {
   return {
     schema: graphqlSchema,
-    graphiql: process.env.NODE_ENV === 'development',
+    graphiql: true,
     formatError: (error) => ({
       message: error.message,
       details: error.stack,
