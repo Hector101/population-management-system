@@ -26,11 +26,6 @@
   },
   "homepage": "https://github.com/Hector101/population-management-system#readme",
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/node": "^7.2.2",
-    "@babel/plugin-transform-async-to-generator": "^7.2.0",
-    "@babel/preset-env": "^7.3.1",
     "babel-core": "^6.26.3",
     "babel-jest": "^24.0.0",
     "babel-polyfill": "^6.26.0",
@@ -42,6 +37,11 @@
   },
   "dependencies": {
     "apollo-errors": "^1.9.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-async-to-generator": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
     "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
