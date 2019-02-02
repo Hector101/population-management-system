@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
@@ -53,10 +52,7 @@ export const createApp =  () => {
   app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 
   app.use('/graphql', graghqlHttp(graphqlRequest));
-
-  app.use('/', (req, res) => {
-    return res.status(200).send('Welcome to Population Management System Page');
-  });
+  app.use(express.static('doc'));
 
   app.use('*', (req, res) => {
     return res.status(404).send('Not found');
